@@ -1,0 +1,289 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Tiêu đề */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Phần lọc */
+#filter-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+#filter-section input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9em;
+  width: 150px;
+}
+
+#filter-section button {
+  padding: 8px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+#filter-section button:hover {
+  background-color: #2980b9;
+}
+
+/* Nút thêm mới */
+section button {
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+section button:hover {
+  background-color: #27ae60;
+}
+
+/* Bảng dữ liệu */
+#curriculumTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#curriculumTable th,
+#curriculumTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#curriculumTable th {
+  background-color: #3498db;
+  color: white;
+}
+
+#curriculumTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#curriculumTable tr:hover {
+  background-color: #ecf0f1;
+}
+
+#curriculumTable td button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#curriculumTable td button:first-child {
+  background-color: #f1c40f;
+  color: white;
+}
+
+#curriculumTable td button:first-child:hover {
+  background-color: #d4a017;
+}
+
+#curriculumTable td button:last-child {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#curriculumTable td button:last-child:hover {
+  background-color: #c0392b;
+}
+
+#curriculumTable td a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+#curriculumTable td a:hover {
+  text-decoration: underline;
+}
+
+/* Form thêm/sửa */
+#form-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  display: none;
+}
+
+#form-section h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+#curriculumForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#curriculumForm input,
+#curriculumForm textarea {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+#curriculumForm input[type="text"],
+#curriculumForm textarea {
+  width: 100%;
+  max-width: 300px;
+}
+
+#curriculumForm textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+#curriculumForm input[type="file"] {
+  padding: 5px 0;
+}
+
+#curriculumForm button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+}
+
+#curriculumForm button:hover {
+  background-color: #2980b9;
+}
+
+#curriculumForm button[type="button"] {
+  background-color: #7f8c8d;
+}
+
+#curriculumForm button[type="button"]:hover {
+  background-color: #6c757d;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  #filter-section {
+    flex-direction: column;
+  }
+
+  #filter-section input,
+  #filter-section button {
+    width: 100%;
+  }
+
+  #curriculumTable th,
+  #curriculumTable td {
+    padding: 8px;
+    font-size: 0.8em;
+  }
+
+  #form-section {
+    padding: 15px;
+  }
+
+  #curriculumForm input[type="text"],
+  #curriculumForm textarea {
+    max-width: 100%;
+  }
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#filter-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#filter-section input {
+  padding: 8px;
+  margin: 5px;
+  width: 160px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+#form-section {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#form-section input, #form-section textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}

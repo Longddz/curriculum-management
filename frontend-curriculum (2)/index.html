@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Curriculum Management</title>
+  <link rel="stylesheet" href="assets/style_index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="search-bar">
+      <button class="back-login-btn" onclick="goToLogin()">Đăng xuất</button>
+      <input type="text" id="searchInput" placeholder="Search by name, lecturer, subject...">
+      <button onclick="filterCurriculums()"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="user-icon" onclick="goToUserDetails()">
+      <i class="fas fa-user"></i>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="curriculum-list" id="curriculumList"></div>
+    <div class="pagination" id="pagination">
+      <button onclick="prevPage()" id="prevBtn">Previous</button>
+      <span id="pageInfo"></span>
+      <button onclick="nextPage()" id="nextBtn">Next</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay" onclick="hideDetails()"></div>
+  <div class="modal" id="detailsModal">
+    <div class="modal-content">
+      <h2>Curriculum Details</h2>
+      <p><strong>Curriculum Code:</strong> <span id="detailCode"></span></p>
+      <p><strong>Name Curriculum:</strong> <span id="detailName"></span></p>
+      <p><strong>Lecturer:</strong> <span id="detailLecturer"></span></p>
+      <p><strong>Subject:</strong> <span id="detailSubject"></span></p>
+      <p><strong>Branch:</strong> <span id="detailBranch"></span></p>
+      <p><strong>Department:</strong> <span id="detailDepartment"></span></p>
+      <p><strong>Description:</strong> <span id="detailDescription"></span></p>
+      <p><strong>URL:</strong> <span id="detailUrl"><a id="detailUrlLink" href="#" target="_blank">View</a></span></p>
+      <button class="close-btn" onclick="hideDetails()">Close</button>
+      <button class="download-btn" onclick="downloadFile()">Download</button>
+    </div>
+  </div>
+
+  <!-- Chatbot Trigger Button -->
+  <div id="chatbotToggle" onclick="toggleChatbot()">💬</div>
+
+  <!-- Chatbot Floating Window -->
+  <div id="chatbotContainer">
+    <div id="chatbotHeader">
+      <span>AI Tư vấn Giáo trình</span>
+      <button onclick="toggleChatbot()">✖</button>
+    </div>
+    <iframe
+      src="https://www.chatbase.co/chatbot-iframe/K8LmJwNteJzKFN_LWXy5N"
+      width="100%"
+      height="100%"
+      frameborder="0">
+    </iframe>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

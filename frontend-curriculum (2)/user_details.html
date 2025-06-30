@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Details</title>
+  <link rel="stylesheet" href="assets/style_user_details.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>User Profile</h2>
+    <div class="user-card">
+      <div class="user-avatar">
+        <i class="fas fa-user-circle"></i>
+      </div>
+      <div class="user-info">
+        <p><strong>Id_Account:</strong> <span id="idAccount"></span></p>
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Position (Chức vụ):</strong> <span id="position"></span></p>
+        <p><strong>Identifier (Mã định danh):</strong> <span id="identifier"></span></p>
+        <p><strong>Department (Khoa):</strong> <span id="department"></span></p>
+        <p><strong>Id_School (Mã khoa):</strong> <span id="idSchool"></span></p>
+      </div>
+    </div>
+
+    <div class="management-buttons" id="managementButtons"></div>
+
+    <div class="update-section">
+      <button class="update-button" onclick="toggleUpdateForm()">Update User Information</button>
+      <button class="update-password-button" onclick="showUpdatePasswordForm()">Update Password</button>
+      <button class="back-button" onclick="window.location.href='index.html'">Come Back</button>
+    </div>
+
+    <div class="update-form" id="updateForm" style="display: none;">
+      <h3>Update User Information</h3>
+      <form id="updateUserForm">
+        <input type="text" id="updateName" placeholder="Name" required />
+        <input type="text" id="updatePosition" placeholder="Position" required />
+        <input type="text" id="updateIdentifier" placeholder="Identifier" required />
+        <input type="text" id="updateDepartment" placeholder="Department" required />
+        <input type="number" id="updateIdSchool" placeholder="Id_School" required />
+        <button type="submit">Save Changes</button>
+        <button type="button" onclick="toggleUpdateForm()">Cancel</button>
+      </form>
+    </div>
+
+    <div class="password-form" id="passwordForm" style="display: none;">
+      <h3>Update Password</h3>
+      <form id="updatePasswordForm">
+        <input type="password" id="currentPassword" placeholder="Current Password" required />
+        <input type="password" id="newPassword" placeholder="New Password" required />
+        <button type="submit">Update Password</button>
+        <button type="button" onclick="hidePasswordForm()">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/user_details.js"></script>
+</body>
+</html>
